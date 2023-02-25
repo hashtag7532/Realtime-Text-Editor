@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import CodeMirror from 'codemirror/lib/codemirror.js';
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/dracula.css';
@@ -17,11 +17,10 @@ const Editor = () => {
                 lineNumbers : true,  
             })
         }
-
         init();
     }, [])
   return (
-    <textarea id="realtimeEditor" />
+    <textarea id="realtimeEditor"></textarea>
   )
 }
 
